@@ -1,3 +1,14 @@
+source: https://dartsim.github.io/install_dart_on_ubuntu.html
+
+
 sudo apt-get install build-essential cmake pkg-config git
 sudo apt-get install libeigen3-dev libassimp-dev libccd-dev libfcl-dev libboost-regex-dev libboost-system-dev
 sudo apt-get install libopenscenegraph-dev
+sudo apt-get install libnlopt-dev
+sudo apt-get install coinor-libipopt-dev
+sudo apt-get install libbullet-dev
+sudo apt-get install libflann-dev
+sudo apt-get install libtinyxml2-dev
+sudo apt-get install liburdfdom-dev
+sudo apt-get install libxi-dev libxmu-dev freeglut3-dev
+

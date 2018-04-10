@@ -1,0 +1,34 @@
+source: http://ejklike.github.io/2017/03/06/install-tensorflow1.0-on-ubuntu16.04-1.html
+
+#1. nvidia driver
+1. sudo add-apt-repository ppa:graphics-drivers/ppa
+2. sudo apt-get update
+3. sudo apt-get install nvidia-375
+4. sudo reboot
+
+#2. Cuda9.0 설치
+5. https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal
+6. download "cuda_9.0.176_384.81_linux.run"
+7. chmod +X "cuda_9.0.176_384.81_linux.run"
+8. ./cuda_9.0.176_384.81_linux.run
+9. 설치
+10.
+$ echo -e "\n## CUDA and cuDNN paths"  >> ~/.bashrc
+$ echo 'export PATH=/usr/local/cuda-9.0/bin:${PATH}' >> ~/.bashrc
+$ echo 'export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:${LD_LIBRARY_PATH}' >> ~/.bashrc
+$ source ~/.bashrc
+$ nvcc --version
+
+#3. cuDNN 7.1.2 for CUDA 9.0
+11. download "cudnn-9.0-linux-x64-v7.1.tgz"
+12. $ tar xzvf cudnn-8.0-linux-x64-v5.1.tgz
+13. $ which nvcc
+14. $ sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/
+15. $ sudo cp cuda/include/* /usr/local/cuda-9.0/include/
+16. $ sudo chmod a+r /usr/local/cuda-9.0/lib64/libcudnn*
+17. $ sudo chmod a+r /usr/local/cuda-9.0/include/cudnn.h
+18. Verification
+$ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2  
+
+#4. Tensorflow
+19. pip3 install tensorflow-gpu

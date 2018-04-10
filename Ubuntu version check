@@ -1,0 +1,1 @@
+$ uname -m && cat /etc/*release

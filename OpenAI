@@ -1,0 +1,16 @@
+source: http://www.modulabs.co.kr/RL_library/1705
+
+1. sudo apt-get install python3-pip
+
+(1) 기본설치
+2. cd ~
+3. git clone https://github.com/openai/gym
+4. cd gym
+5. sudo pip install -e . # minimal install
+
+(2) 모두설치; https://github.com/openai/gym#installing-everything
+2. cd ~
+3. git clone https://github.com/openai/gym
+4. cd gym
+5. sudo apt-get install -y python-numpy python-dev cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python-opengl libboost-all-dev libsdl2-dev swig
+6. sudo pip install -e .[all]

@@ -2,8 +2,9 @@ source: https://dartsim.github.io/install_dart_on_ubuntu.html
 
 1. cd ~
 2. git clone git://github.com/dartsim/dart.git
-3. mkdir build ; cd build
-4. cmake .. ; make -j4
-5. sudo make install
-*6. sudo make uninstall
+3. cd dart
+4. mkdir build ; cd build
+5. cmake .. ; make -j4
+6. sudo make install
+*7. sudo make uninstall
 

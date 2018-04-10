@@ -1,0 +1,14 @@
+IP: 147.47.209.121
+Gateway: 147.47.209.1
+
+1. open "Network"
+2. click "Options" 우측 하단
+3. click "IPv4 Settings" tab
+4. select "Manual" as "Method"
+5. click "Add"
+5-1. Address: ${IP}
+5-2. Netmask: 24
+5-3. Gateway: ${Gateway}
+5-4. DNS: 147.46.80.1
+6. click "Save"
+7. reboot

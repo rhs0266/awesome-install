@@ -1,0 +1,21 @@
+source: https://github.com/openai/roboschool
+
+
+
+1. "git clone https://github.com/openai/roboschool"
+2. set path as "ROBOSCHOOL_PATH=/path/to/roboschool"
+3. dependencies for Ubuntu as "sudo apt install cmake ffmpeg pkg-config qtbase5-dev libqt5opengl5-dev libassimp-dev libpython3.5-dev libboost-python-dev libtinyxml-dev"
+4. "cd roboschool"
+5. install bullet3 for roboschool
+"""
+git clone https://github.com/olegklimov/bullet3 -b roboschool_self_collision
+mkdir bullet3/build
+cd    bullet3/build
+cmake -DBUILD_SHARED_LIBS=ON -DUSE_DOUBLE_PRECISION=1 -DCMAKE_INSTALL_PREFIX:PATH=$ROBOSCHOOL_PATH/roboschool/cpp-household/bullet_local_install -DBUILD_CPU_DEMOS=OFF -DBUILD_BULLET2_DEMOS=OFF -DBUILD_EXTRAS=OFF  -DBUILD_UNIT_TESTS=OFF -DBUILD_CLSOCKET=OFF -DBUILD_ENET=OFF -DBUILD_OPENGL3_DEMOS=OFF ..
+make -j4
+sudo make install
+cd ../..
+"""
+6. "pip3 install -e $ROBOSCHOOL_PATH"
+7. agent_zoo 안에 있는 python 코드를 실행하려면 각 코드마다 "from OpenGL import GLU" 를 추가한다.
+8. verification as "python3 $ROBOSCHOOL_PATH/agent_zoo/RoboschoolHumanoidFlagrun_v0_2017may.py"

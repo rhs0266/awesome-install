@@ -1,0 +1,9 @@
+source: https://www.slideshare.net/arload/doxygen-33932243
+
+1. "sudo apt-get update"
+2. "sudo apt-get install graphviz"
+3. "sudo apt-get install doxygen"
+4. "sudo apt-get install doxygen-gui"
+5. "doxywizard"
+6. setting (following source)
+7. Done
